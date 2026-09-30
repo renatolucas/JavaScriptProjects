@@ -6,4 +6,4 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 
 [Number Checker](https://roadmap.sh/projects/js-number-checker): https://github.com/renatolucas/JavaScriptProjects/blob/main/NumberChecker/main.js
 
-[String Formatter](https://roadmap.sh/projects/js-string-formatter): 
+[String Formatter](https://roadmap.sh/projects/js-string-formatter): https://github.com/renatolucas/JavaScriptProjects/blob/main/StringFormatter/main.js
