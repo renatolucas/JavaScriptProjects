@@ -9,3 +9,5 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 [String Formatter](https://roadmap.sh/projects/js-string-formatter): https://github.com/renatolucas/JavaScriptProjects/blob/main/StringFormatter/main.js
 
 [Price Calculator](https://roadmap.sh/projects/js-price-calculator): https://github.com/renatolucas/JavaScriptProjects/blob/main/PriceCalculator/main.js
+
+[Cart Total Calculator](https://roadmap.sh/projects/js-cart-total-calculator): 
