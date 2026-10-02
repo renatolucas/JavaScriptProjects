@@ -10,4 +10,4 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 
 [Price Calculator](https://roadmap.sh/projects/js-price-calculator): https://github.com/renatolucas/JavaScriptProjects/blob/main/PriceCalculator/main.js
 
-[Cart Total Calculator](https://roadmap.sh/projects/js-cart-total-calculator): 
+[Cart Total Calculator](https://roadmap.sh/projects/js-cart-total-calculator): https://github.com/renatolucas/JavaScriptProjects/blob/main/CartTotalCalculator/main.js
