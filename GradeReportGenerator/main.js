@@ -1,18 +1,35 @@
-/*
-Turn a numeric score into a grade report. The report should include the letter grade, whether the student passed, and a short feedback message.
+console.log(createGradeReport('Ava', 92));
+console.log(createGradeReport('Noah', 48));
+console.log(createGradeReport('Mina', 75));
+console.log(createGradeReport('Sam', 60));
 
-Write these functions:
+function createGradeReport(name, score) {
+    const grade = getLetterGrade(score);
+    const passed = hasPassed(score);
+    const feedback = getFeedback(grade);
+    const gradeReport = {
+        name: name,
+        score: score,
+        grade: grade,
+        passed: passed,
+        feedback: feedback
+    }
 
-getLetterGrade(score) should return "A", "B", "C", "D", or "F" based on the score.
+    return gradeReport;
+}
 
-hasPassed(score) should return true when the score is 60 or higher.
+function getFeedback(grade) {
+    if (grade === 'A') {
+        return 'Excellent work';
+    } else if (grade === 'B') {
+        return 'Great job';
+    } else if (grade === 'C' || grade === 'D') {
+        return 'You passed';
+    } else {
+        return 'Keep practicing';
+    }
 
-getFeedback(grade) should return a short message for the grade.
-
-createGradeReport(name, score) should return one object with name, score, grade, passed, and feedback.
-*/
-
-
+}
 
 function hasPassed(score) {
     return score >= 60;
