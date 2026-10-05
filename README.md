@@ -12,4 +12,4 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 
 [Cart Total Calculator](https://roadmap.sh/projects/js-cart-total-calculator): https://github.com/renatolucas/JavaScriptProjects/blob/main/CartTotalCalculator/main.js
 
-[Grade Report Generator](https://roadmap.sh/projects/js-grade-report-generator): https://github.com/renatolucas/JavaScriptProjects/tree/main/GradeReportGenerator
+[Grade Report Generator](https://roadmap.sh/projects/js-grade-report-generator): https://github.com/renatolucas/JavaScriptProjects/blob/main/GradeReportGenerator/main.js
