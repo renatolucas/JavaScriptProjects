@@ -14,4 +14,4 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 
 [Grade Report Generator](https://roadmap.sh/projects/js-grade-report-generator): https://github.com/renatolucas/JavaScriptProjects/blob/main/GradeReportGenerator/main.js
 
-[Task List Utilities](https://roadmap.sh/projects/js-task-list-utilities): 
+[Task List Utilities](https://roadmap.sh/projects/js-task-list-utilities): https://github.com/renatolucas/JavaScriptProjects/blob/main/TaskListUtilities/main.js
