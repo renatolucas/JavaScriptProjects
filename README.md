@@ -16,4 +16,4 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 
 [Task List Utilities](https://roadmap.sh/projects/js-task-list-utilities): https://github.com/renatolucas/JavaScriptProjects/blob/main/TaskListUtilities/main.js
 
-[Expense Summary](https://roadmap.sh/projects/js-expense-summary): 
+[Expense Summary](https://roadmap.sh/projects/js-expense-summary): https://github.com/renatolucas/JavaScriptProjects/blob/main/ExpenseSummary/main.js
