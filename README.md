@@ -19,3 +19,5 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 [Expense Summary](https://roadmap.sh/projects/js-expense-summary): https://github.com/renatolucas/JavaScriptProjects/blob/main/ExpenseSummary/main.js
 
 [Product Search and Filter](https://roadmap.sh/projects/js-product-search-and-filter): https://github.com/renatolucas/JavaScriptProjects/blob/main/ProductSearchFilter/main.js
+
+[User Profile Formatter](https://roadmap.sh/projects/js-user-profile-formatter): 
