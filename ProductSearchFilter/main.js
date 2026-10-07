@@ -1,18 +1,3 @@
-/*
-You are building search helpers for a small product list. Some helpers should return multiple products, and one helper should return a single product.
-
-Write these functions:
-
-filterByCategory(products, category) should return products in the matching category.
-
-filterByMaxPrice(products, maxPrice) should return products at or below the max price.
-
-getInStockProducts(products) should return products where inStock is true.
-
-findProductById(products, productId) should return one matching product or undefined.
-
-searchProducts(products, searchText) should return products whose name includes the search text, ignoring casing.*/
-
 const products = [
     { id: 1, name: 'Notebook', category: 'stationery', price: 10, inStock: true },
     { id: 2, name: 'Desk Lamp', category: 'home', price: 35, inStock: false },
@@ -25,3 +10,31 @@ const products = [
         inStock: true,
     },
 ];
+
+
+console.log(filterByCategory(products, 'stationery').map((product) => product.name));
+console.log(filterByMaxPrice(products, 20).map((product) => product.name));
+console.log(findProductById(products, 3));
+console.log(searchProducts(products, 'pen').map((product) => product.name));
+console.log(getInStockProducts(products).map((product) => product.name));
+console.log(findProductById(products, 99));
+
+function filterByCategory(products, category) {
+    return products.filter(product => product.category === category);
+}
+
+function filterByMaxPrice(products, maxPrice) {
+    return products.filter(product => product.price <= maxPrice);
+}
+
+function getInStockProducts(products) {
+    return products.filter(product => product.inStock)
+}
+
+function findProductById(products, productId) {
+    return products.find(product => product.id === productId);
+}
+
+function searchProducts(products, searchText) {
+    return products.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase()));
+}
