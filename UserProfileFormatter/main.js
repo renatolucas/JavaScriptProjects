@@ -30,11 +30,42 @@ const user = {
 };
 
 
+console.log(createProfileSummary(user));
+console.log(getDisplayName(user));
+console.log(isAccountActive(user));
+console.log(getContactSummary(user));
+
 function getDisplayName(user) {
     return `${user.firstName} ${user.lastName}`;
 }
 
 function getLocation(user) {
-    return `${user.account.city}, ${user.account.country}`;
+    return `${user.address.city}, ${user.address.country}`;
 }
 
+function getContactSummary(user) {
+    const email = user.email;
+    const phone = user.phone;
+    return {
+        email: email,
+        phone: phone
+    }
+}
+
+function isAccountActive(user) {
+    if (user.account.status) {
+        return true;
+    }
+
+    return false;
+}
+
+function createProfileSummary(user) {
+    return {
+        displayName: getDisplayName(user),
+        location: getLocation(user),
+        contact: getContactSummary(user),
+        active: isAccountActive(user),
+        plan: user.account.plan
+    }
+}
