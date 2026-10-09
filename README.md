@@ -22,4 +22,4 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 
 [User Profile Formatter](https://roadmap.sh/projects/js-user-profile-formatter): https://github.com/renatolucas/JavaScriptProjects/blob/main/UserProfileFormatter/main.js
 
-[Quiz Score Calculator](https://roadmap.sh/projects/js-quiz-score-calculator): 
+[Quiz Score Calculator](https://roadmap.sh/projects/js-quiz-score-calculator): https://github.com/renatolucas/JavaScriptProjects/blob/main/QuizScoreCalculator/main.js

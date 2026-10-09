@@ -1,23 +1,10 @@
-/*Score a quiz by matching each question with the answer the user gave. The final result should include the count, total, percentage, and a simple message.
-
-Write these functions:
-
-isAnswerCorrect(question, userAnswer) should return true when the user's answer matches the correct answer.
-
-countCorrectAnswers(questions, userAnswers) should match each question with its user answer and return the number correct.
-
-calculatePercentage(correctCount, totalQuestions) should return the percentage score.
-
-getResultMessage(percentage) should return a short message based on the percentage.
-
-createQuizResult(questions, userAnswers) should return correctCount, totalQuestions, percentage, and message.*/
-
 const questions = [
     { id: 1, correctAnswer: 'B' },
     { id: 2, correctAnswer: 'A' },
     { id: 3, correctAnswer: 'D' },
     { id: 4, correctAnswer: 'C' },
 ];
+
 const userAnswers = [
     { questionId: 1, answer: 'B' },
     { questionId: 2, answer: 'C' },
@@ -25,11 +12,12 @@ const userAnswers = [
     { questionId: 4, answer: 'C' },
 ];
 
-console.log(isAnswerCorrect(questions[0], userAnswers[0]));
+console.log(createQuizResult(questions, userAnswers));
 console.log(countCorrectAnswers(questions, userAnswers));
-console.log(calculatePercentage(countCorrectAnswers(questions, userAnswers), questions.length));
-console.log(getResultMessage(calculatePercentage(countCorrectAnswers(questions, userAnswers), questions.length)));
+console.log(calculatePercentage(3, questions.length));
 
+const partialAnswers = [{ questionId: 1, answer: 'B' }];
+console.log(createQuizResult(questions, partialAnswers));
 
 function isAnswerCorrect(question, userAnswer) {
     if (question.id === userAnswer.questionId) {
@@ -69,3 +57,16 @@ function getResultMessage(percentage) {
     return 'Keep Practicing';
 } //should return a short message based on the percentage.
 
+function createQuizResult(questions, userAnswers) {
+    const correctCount = countCorrectAnswers(questions, userAnswers);
+    const totalQuestions = questions.length;
+    const percentage = calculatePercentage(correctCount, questions.length);
+    const message = getResultMessage(percentage);
+
+    return {
+        correctCount: correctCount,
+        totalQuestions: totalQuestions,
+        percentage: percentage,
+        message: message
+    }
+} //should return correctCount, totalQuestions, percentage, and message.*/
