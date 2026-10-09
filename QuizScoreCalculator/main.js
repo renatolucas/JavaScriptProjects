@@ -69,4 +69,4 @@ function createQuizResult(questions, userAnswers) {
         percentage: percentage,
         message: message
     }
-} //should return correctCount, totalQuestions, percentage, and message.*/
+}
