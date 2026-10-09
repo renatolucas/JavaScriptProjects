@@ -27,6 +27,8 @@ const userAnswers = [
 
 console.log(isAnswerCorrect(questions[0], userAnswers[0]));
 console.log(countCorrectAnswers(questions, userAnswers));
+console.log(calculatePercentage(countCorrectAnswers(questions, userAnswers), questions.length));
+console.log(getResultMessage(calculatePercentage(countCorrectAnswers(questions, userAnswers), questions.length)));
 
 
 function isAnswerCorrect(question, userAnswer) {
@@ -51,4 +53,19 @@ function countCorrectAnswers(questions, userAnswers) {
     }
 
     return count;
-} 
+}
+
+function calculatePercentage(correctCount, totalQuestions) {
+    return (correctCount / totalQuestions) * 100;
+}
+
+function getResultMessage(percentage) {
+    if (percentage >= 80) {
+        return 'Great work';
+    } else if (percentage >= 60) {
+        return 'You passed';
+    }
+
+    return 'Keep Practicing';
+} //should return a short message based on the percentage.
+
