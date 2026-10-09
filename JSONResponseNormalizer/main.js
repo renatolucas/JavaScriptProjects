@@ -39,6 +39,22 @@ const apiResponse = {
     },
 };
 
-console.log(normalizeArticles(apiResponse));
-console.log(getPublishedArticles(apiResponse).length);
+// console.log(normalizeArticles(apiResponse));
+// console.log(getPublishedArticles(apiResponse).length);
+// console.log(toArticleSummary(apiResponse.data[0]));
+
+console.log(getPublishedArticles(apiResponse));
 console.log(toArticleSummary(apiResponse.data[0]));
+
+function getPublishedArticles(apiResponse) {
+    return apiResponse.data.filter(article => article.status === 'published');
+}
+
+function toArticleSummary(article) {
+    return {
+        id: article.id,
+        title: article.title,
+        authorName: article.author.name,
+        views: article.stats.views
+    }
+}
