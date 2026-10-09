@@ -1,15 +1,3 @@
-/*An API response often contains more data than your program needs. Normalize the response into a smaller list of published article summaries.
-
-Write these functions:
-
-getPublishedArticles(response) should return only articles where status is "published".
-
-toArticleSummary(article) should return an object with id, title, authorName, and views.
-
-normalizeArticles(response) should return summaries for published articles only.
-
-Sample checks:*/
-
 const apiResponse = {
     data: [
         {
@@ -39,15 +27,12 @@ const apiResponse = {
     },
 };
 
-// console.log(normalizeArticles(apiResponse));
-// console.log(getPublishedArticles(apiResponse).length);
-// console.log(toArticleSummary(apiResponse.data[0]));
-
-console.log(getPublishedArticles(apiResponse));
+console.log(normalizeArticles(apiResponse));
+console.log(getPublishedArticles(apiResponse).length);
 console.log(toArticleSummary(apiResponse.data[0]));
 
-function getPublishedArticles(apiResponse) {
-    return apiResponse.data.filter(article => article.status === 'published');
+function getPublishedArticles(response) {
+    return response.data.filter(article => article.status === 'published');
 }
 
 function toArticleSummary(article) {
@@ -57,4 +42,8 @@ function toArticleSummary(article) {
         authorName: article.author.name,
         views: article.stats.views
     }
+}
+
+function normalizeArticles(response) {
+    return response.data.map(article => toArticleSummary(article));
 }
