@@ -25,6 +25,17 @@ const userAnswers = [
     { questionId: 4, answer: 'C' },
 ];
 
-function isAnswerCorrect(questio, userAnswer) {
+console.log(isAnswerCorrect(questions[0], userAnswers[0]))
+
+
+function isAnswerCorrect(question, userAnswer) {
+    if (question.id === userAnswer.questionId) {
+        if (question.correctAnswer === userAnswer.answer) {
+            return true;
+        }
+    }
+
+    return false;
 
 }
+
