@@ -25,7 +25,8 @@ const userAnswers = [
     { questionId: 4, answer: 'C' },
 ];
 
-console.log(isAnswerCorrect(questions[0], userAnswers[0]))
+console.log(isAnswerCorrect(questions[0], userAnswers[0]));
+console.log(countCorrectAnswers(questions, userAnswers));
 
 
 function isAnswerCorrect(question, userAnswer) {
@@ -39,3 +40,15 @@ function isAnswerCorrect(question, userAnswer) {
 
 }
 
+function countCorrectAnswers(questions, userAnswers) {
+    let count = 0;
+    for (let i = 0; i < questions.length; i++) {
+        for (let j = i; j < userAnswers.length; j++) {
+            if (questions[i].id === userAnswers[j].questionId && questions[i].correctAnswer === userAnswers[j].answer) {
+                count++;
+            }
+        }
+    }
+
+    return count;
+} 
