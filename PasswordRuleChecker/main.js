@@ -21,3 +21,15 @@ console.log(validatePassword('HELLOABC'));
 
 */
 
+function hasMinimumLength(password) {
+    return password.length >= 8;
+}
+
+function hasNumber(password) {
+    return password.split('').some(char => !Number.isNaN(char) && char != ' ');
+}
+
+function hasUpperCaseLetter(password) {
+    return password.split('').some(char => char.toUpperCase() === char && char.toLowerCase() !== char);
+}
+
