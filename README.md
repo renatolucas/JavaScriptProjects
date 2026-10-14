@@ -25,3 +25,5 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 [Quiz Score Calculator](https://roadmap.sh/projects/js-quiz-score-calculator): https://github.com/renatolucas/JavaScriptProjects/blob/main/QuizScoreCalculator/main.js
 
 [JSON Response Normalizer](https://roadmap.sh/projects/js-json-response-normalizer): https://github.com/renatolucas/JavaScriptProjects/blob/main/JSONResponseNormalizer/main.js
+
+[Password Rule Checker](https://roadmap.sh/projects/js-password-rule-checker): https://github.com/renatolucas/JavaScriptProjects/blob/main/PasswordRuleChecker/main.js
