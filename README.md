@@ -28,4 +28,4 @@ Soluções dos desafios técnicos propostos pelo roadmap.sh.
 
 [Password Rule Checker](https://roadmap.sh/projects/js-password-rule-checker): https://github.com/renatolucas/JavaScriptProjects/blob/main/PasswordRuleChecker/main.js
 
-[Order Status Helper](https://roadmap.sh/projects/js-order-status-helper): 
+[Order Status Helper](https://roadmap.sh/projects/js-order-status-helper): https://github.com/renatolucas/JavaScriptProjects/blob/main/OrderStatusHelper/main.js
