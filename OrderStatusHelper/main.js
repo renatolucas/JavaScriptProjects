@@ -1,3 +1,5 @@
+
+
 const order = {
     id: 'ORD-1001',
     customer: {
@@ -5,10 +7,10 @@ const order = {
         email: 'ava@example.com',
     },
     payment: {
-        status: 'unpaid',
+        status: 'paid',
     },
     shipping: {
-        status: 'unshipped',
+        status: 'shipped',
         estimatedDelivery: '2026-06-18',
     },
     items: [
@@ -16,9 +18,16 @@ const order = {
         { name: 'Pen Set', quantity: 1 },
     ],
 };
+console.log(createOrderSummary(order));
 console.log(isPaid(order));
 console.log(hasShipped(order));
-console.log(getDeliveryMessage(order));
+const pendingOrder = {
+    ...order,
+    payment: { status: 'unpaid' },
+    shipping: { status: 'processing', estimatedDelivery: '2026-06-18' },
+};
+console.log(needsAttention(pendingOrder));
+console.log(getDeliveryMessage(pendingOrder));
 
 function isPaid(order) {
     return order.payment.status === 'paid';
@@ -51,8 +60,8 @@ function createOrderSummary(order) {
         customerName: order.customer.name,
         paid: isPaid(order),
         shipped: hasShipped(order),
-        itemCount: order.items.length,
-        deliveryMessage: deliveryMessage ? `Order shipped. Estimated delivery: ${deliveryMessage}` : '',
+        itemCount: order.items.reduce((acc, item) => acc + item.quantity, 0),
+        deliveryMessage: deliveryMessage !== null ? `Order shipped. Estimated delivery: ${deliveryMessage}` : 'Order has not shipped yet.',
         needsAttention: needsAttention(order)
     }
 }
