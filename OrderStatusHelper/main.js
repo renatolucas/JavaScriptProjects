@@ -39,10 +39,10 @@ function hasShipped(order) {
 
 function getDeliveryMessage(order) {
     if (hasShipped(order)) {
-        return order.shipping.estimatedDelivery;
+        return `Order shipped. Estimated delivery: ${order.shipping.estimatedDelivery}`;
     }
 
-    return null;
+    return 'Order has not shipped yet';
 }
 
 function needsAttention(order) {
